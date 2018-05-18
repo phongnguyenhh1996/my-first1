@@ -1,0 +1,86 @@
+%square {
+  position: absolute;
+  top:50%;
+  border-radius: 3px;
+  @include transform-customize(translateY(-60%) rotate(45deg));
+}
+.left-square-1 {
+  @extend %square;
+  left: -30px;
+  width: 10px;
+  height: 10px;
+  background-color: $primary-color;
+} 
+.left-square-2 {
+  @extend .left-square-1;
+  left: -36px;
+  width: 8px;
+  height: 8px;
+  background-color: $primary-color-50;
+}
+.left-square-3 {
+  @extend .left-square-1;
+  left: -42px;
+  width: 6px;
+  height: 6px;
+  background-color: $primary-color-30;
+}
+.right-square-1 {
+  @extend %square;
+  right: -30px;
+  width: 10px;
+  height: 10px;
+  background-color: $primary-color;
+}
+.right-square-2 {
+  @extend %square;
+  right: -36px;
+  width: 8px;
+  height: 8px;
+  background-color: $primary-color-50;
+}
+.right-square-3 {
+  @extend %square;
+  right: -42px;
+  width: 6px;
+  height: 6px;
+  background-color: $primary-color-30;
+}
+.right-line {
+  position: absolute;
+  top: 60%;
+  left: 120%;
+  width: 500%;
+  transform: translateY(-5px);
+  background: rgba(0, 0, 0, .1);
+  height:1px;
+  &::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateY(5px);
+    width: 100%;
+    background: rgba(0, 0, 0, .1);
+    height:1px;
+    content: "";
+  }
+}
+.left-line {
+  position: absolute;
+  top: 60%;
+  right: 120%;
+  width: 500%;
+  transform: translateY(-5px);
+  background: rgba(0, 0, 0, .1);
+  height:1px;
+  &::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateY(5px);
+    width: 100%;
+    background: rgba(0, 0, 0, .1);
+    height:1px;
+    content: "";
+  }
+}

@@ -1,0 +1,208 @@
+.main-container {
+  .start-doing {
+      overflow: hidden;
+      .h3 {
+        font-weight: 600;
+        display: inline-block;
+        position: relative;
+        span {
+          color: $primary-color;
+        }
+      }
+  }
+  .offer {
+    .big-icon {
+      background-color: #383838;
+      color: #e4e4e4;
+      padding: 2rem .5rem;
+      border-radius: 50%;
+      transition: background .3s;
+    }
+    .offer-item:hover .big-icon{
+        background-color: $primary-color;
+    }
+    .h4 {
+      font-weight: 600;
+    }
+    .h4, p {
+      color: #606060;
+    }
+    .btn {
+      border: 1px solid #dedede;
+      color: #8a8a8a;
+      text-transform: uppercase;
+      font-weight: 600;
+      &:hover {
+        color: #e3e3e3;
+        border-color: $primary-color;
+        background-color: $primary-color;
+      }
+    }
+  }
+  .feature {
+    background-color: $bg-dark;
+    .h3 {
+      color: #e4e4e4;
+    }
+    .heading-decription {
+      color: #717171;
+    }
+  }
+  .key {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top:0;
+    left:50%;
+    transform: translateY(-50%) translateX(-50%) rotate(45deg);
+    border-radius: 5px;
+    background-color: $primary-color;
+    .fa-key {
+      position: absolute;
+      top:50%;
+      left:50%;
+      transform: translateY(-50%) translateX(-50%) rotate(140deg);
+      font-size: 20px;
+    }
+    .fa-briefcase {
+      position: absolute;
+      top:50%;
+      left:50%;
+      transform: translateY(-50%) translateX(-50%) rotate(-35deg);
+      font-size: 20px;
+    }
+  }
+  .device{
+    overflow:hidden;
+    .tablet {
+      border: 3px solid $text-light;
+      position: absolute;
+      right: 0;
+      height: 700px;
+      width: 300px;
+      background-color: #fff;
+      border-radius: 20px;
+      padding: 40px 15px 0px 15px;
+      .img-fluid{
+        border: 1px solid $text-dark;
+      }
+      &::after {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        height: 5px;
+        width: 5px;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        background-color: black;
+        content:"";
+      }
+    }
+    .tablet-landscape {
+      border: 3px solid $text-light;
+      border-bottom: none;
+      position: absolute;
+      left: 0;
+      bottom: 0;  
+      height: 300px;
+      width: 600px;
+      background-color: #fff;
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+      padding: 15px 40px 15px 15px;
+      .img-fluid{
+        border: 1px solid $text-dark;
+      }
+      &::after {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        height: 5px;
+        width: 5px;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        background-color: black;
+        content:"";
+      }
+    }
+  }
+  .features-list {
+    li{
+      color: $text-secondary;
+      .h6 {
+      color: $text-light;
+      text-transform: uppercase;
+      font-weight: 700;
+      }
+      svg{
+        color: $primary-color;
+        float: left;
+        height:100%;
+        display: block;
+      }
+    }
+  }
+  .feature-all {
+    color: $text-dark;
+    .h6 {
+      color: $text-dark;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .small{
+      color: $text-secondary;
+    }
+    .col-4:hover {
+      .shape {
+        background-color: $primary-color;
+        box-shadow: 0 24px 0px 0px $bg-dark;
+      } 
+      .shape::after {
+        border-top: 18px solid $primary-color;
+      }
+      .shape::before {
+        border-top: 18px solid $bg-dark;
+      }
+    }
+    .shape {
+      transition: all .3s;
+      position: relative;
+      background-color: $bg-dark;
+      padding: 5px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      box-shadow: 0 24px 0px 0px $primary-color;
+      &::after {
+        transition: all .3s;
+        position: absolute;
+        content: "";
+        top: 100%;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-left: 24px solid transparent;
+        border-right: 24px solid transparent;    
+        border-top: 18px solid $bg-dark;
+      }
+      &::before {
+        transition: all .3s;
+        position: absolute;
+        content: "";
+        top: calc(100% + 24px);;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-left: 24px solid transparent;
+        border-right: 24px solid transparent;    
+        border-top: 18px solid $primary-color;
+      }
+      svg {
+        color: $text-light;
+        margin: 7px;
+        margin-bottom: 0;
+        display: block;
+      }
+    }
+  }
+}
+

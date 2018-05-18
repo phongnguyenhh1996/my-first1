@@ -1,131 +1,70 @@
-.header-container{
-	.bg-top{
-		background: url('../images/back-top.jpg');
-		background-size: cover;
-		background-position: center center;
-	}
-	.main-text{
-		text-align: center;
-		color: #333333;
-		.h1{
-			font-weight: 700;
-			font-size: 4.2vw;
-		}
-		.dark{
-			background-color: #333333;
-			color: #fff;
-			font-size: 1.2vw;
-			padding: 5px 0px;
-			border-radius: 4px;
-			&::first-letter{
-			color: #00a99d;
-			}
-			span{
-				font-weight: 600;
-			}
-		}
-		.h3{
-			font-weight: 600;
-			display: inline-block;
-			position: relative;
-			span{
-				color: #00a99d;
-			}
-		}
-		.down-arrow{
-			color: #00a99d;
-			border: 3px solid #00a99d;
-			border-radius: 50%;
-			padding: 8px;
-		}
-		.start-doing{
-			overflow: hidden;
-		}
-		%square{
-			position: absolute;
-			top:50%;
-			border-radius: 3px;
-			transform: translateY(-60%) rotate(45deg);
-		}
-		.left-square-1{
-			@extend %square;
-			left: -30px;
-			width: 10px;
-			height: 10px;
-			background-color: #00a99d;
-		} 
-		.left-square-2{
-			@extend .left-square-1;
-			left: -36px;
-			width: 8px;
-			height: 8px;
-			background-color: #3db9af;
-		}
-		.left-square-3{
-			@extend .left-square-1;
-			left: -42px;
-			width: 6px;
-			height: 6px;
-			background-color: #94d3ca;
-		}
-		.right-square-1{
-			@extend %square;
-			right: -30px;
-			width: 10px;
-			height: 10px;
-			background-color: #00a99d;
-		}
-		.right-square-2{
-			@extend %square;
-			right: -36px;
-			width: 8px;
-			height: 8px;
-			background-color: #3db9af;
-		}
-		.right-square-3{
-			@extend %square;
-			right: -42px;
-			width: 6px;
-			height: 6px;
-			background-color: #94d3ca;
-		}
-		.right-line{
-			position: absolute;
-			top: 60%;
-			left: 120%;
-			width: 100%;
-			transform: translateY(-10px);
-			background: #fff;
-			height:1px;
-			&::after{
-				position: absolute;
-				right: 0;
-				top: 0;
-				transform: translateY(10px);
-				width: 100%;
-				background: #fff;
-				height:1px;
-				content: "";
-			}
-		}
-		.left-line{
-			position: absolute;
-			top: 60%;
-			right: 120%;
-			width: 100%;
-			transform: translateY(-10px);
-			background: #fff;
-			height:1px;
-			&::after{
-				position: absolute;
-				right: 0;
-				top: 0;
-				transform: translateY(10px);
-				width: 100%;
-				background: #fff;
-				height:1px;
-				content: "";
-			}
-		}
-	}
+.header-container {
+  .bg-top {
+    background: url('../images/back-top.jpg');
+    background-size: cover;
+    background-position: center center;
+  }
+  .main-text {
+    text-align: center;
+    color: #333333;
+    .h1 {
+      font-weight: 700;
+      font-size: 4.2vw;
+    }
+    .dark {
+      background-color: #333333;
+      color: #fff;
+      font-size: 1.2vw;
+      padding: 5px 0px;
+      border-radius: 4px;
+      &::first-letter {
+      color: $primary-color;
+      }
+      span {
+        font-weight: 600;
+      }
+    }
+    .down-arrow {
+      color: $primary-color;
+      border: 3px solid $primary-color;
+      border-radius: 50%;
+      padding: 8px;
+    }
+    .start-doing {
+      overflow: hidden;
+      .h3 {
+        font-weight: 600;
+        display: inline-block;
+        position: relative;
+        span {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+  .b-nav{
+      border-bottom: 1px solid #dedede;
+      .navbar-brand {
+      color: #9c9c9c;
+      font-weight: 700;
+      }
+      .nav-link {
+        color: #5f5f5f;
+        font-weight: 700;
+        font-size: .9rem;
+        text-transform: uppercase;
+        &:hover, &:focus {
+          color: #000;
+        }
+      }
+      .active > .nav-link {
+          color: #e4e4e4;
+          border-radius: 5px;
+          background-color: $primary-color;
+      }
+      .btn {
+        background-color:transparent;
+        color: $primary-color;
+      }
+  }   
 }
