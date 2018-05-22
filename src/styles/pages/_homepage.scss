@@ -18,7 +18,7 @@
       border-radius: 50%;
       transition: background .3s;
     }
-    .offer-item:hover .big-icon{
+    .offer-item:hover .big-icon {
         background-color: $primary-color;
     }
     .h4 {
@@ -72,7 +72,7 @@
       font-size: 20px;
     }
   }
-  .device{
+  .device {
     overflow:hidden;
     .tablet {
       border: 3px solid $text-light;
@@ -83,7 +83,7 @@
       background-color: #fff;
       border-radius: 20px;
       padding: 40px 15px 0px 15px;
-      .img-fluid{
+      .img-fluid {
         border: 1px solid $text-dark;
       }
       &::after {
@@ -110,7 +110,7 @@
       border-top-right-radius: 20px;
       border-top-left-radius: 20px;
       padding: 15px 40px 15px 15px;
-      .img-fluid{
+      .img-fluid {
         border: 1px solid $text-dark;
       }
       &::after {
@@ -127,14 +127,14 @@
     }
   }
   .features-list {
-    li{
+    li {
       color: $text-secondary;
       .h6 {
       color: $text-light;
       text-transform: uppercase;
       font-weight: 700;
       }
-      svg{
+      svg {
         color: $primary-color;
         float: left;
         height:100%;
@@ -149,7 +149,7 @@
       font-weight: 700;
       text-transform: uppercase;
     }
-    .small{
+    .small {
       color: $text-secondary;
     }
     .col-4:hover {
@@ -204,20 +204,20 @@
       }
     }
   }
-  .skill{
+  .skill {
     background-color: $bg-dark;
     color: $text-light;
-    .heading-decription{
+    .heading-decription {
       color: $text-secondary;
     }
-    .percent-circle{
+    .percent-circle {
       position: relative;
-      .text{
+      .text {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        span{
+        span {
           font-size: 2rem;
           font-weight: 900;
           vertical-align: middle;
@@ -242,11 +242,155 @@
       stroke-dasharray: 100 100;
       }
     }
-    .skill-name{
+    .skill-name {
       color: $text-secondary;
       font-weight: 700;
     }
   }
-
+  .sample-work {
+    .img-fluid {
+      padding: 1px;
+    }
+    .works-info {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(1, 168, 158, .0);
+      border-radius: 3px;
+      transition: all .6s;
+      &:hover {
+        background-color: rgba(1, 168, 158, .8);
+        .icon {
+          opacity: 1;
+          transform: translateX(0);
+          margin-right: 0;
+          margin-left: 0;
+        }
+        .text {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .icon {
+        transition: all .4s;
+        position: relative;
+        padding: 5px;
+        margin-left: -7px;
+        margin-right: -7px;
+        opacity: 0; 
+        &::before {
+          transition: all .3s;
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-color: $text-light;
+          border-radius: 4px;
+          transform: rotate(45deg);
+          z-index: 0;
+        }
+        &:hover {
+          svg {color: $text-light;}
+        }
+        &:hover::before {
+          background-color: $bg-dark;
+        }
+        svg {
+          color: $primary-color;
+          position: relative;
+          z-index: 1;
+          transition: all .3s;
+        }
+      }
+    }
+    .text {
+      opacity: 0;
+      transition: all .4s;
+      transform: translateY(15px);
+      .name {
+        font-weight: 600;
+      }
+      p, a {
+        color: $text-light;
+      }
+    }
+    .btn {
+      background-color: $primary-color;
+      font-weight: 600;
+      color: $text-light;
+    }
+  }
+  .company-facts {
+    background-color: $bg-dark;
+    color: $text-light;
+    .heading-decription {
+      color: $text-secondary;
+    }
+    .item:hover {
+      .stats::before, .stats::after {
+        background-color: $primary-color;
+      }
+    }
+    .stats {
+      position: relative;
+      display: inline-block;
+      font-size: 5rem;
+      font-weight: 500;
+      font-style: italic;
+      &::before, &::after {
+        transition: all .3s;
+        position: absolute;
+        content: "";
+        top: 50%;
+        width: 10px;
+        height: 10px;
+        background-color: $text-secondary;
+        transform: translateY(-50%) rotate(-45deg);
+        border-radius: 3px;
+      }
+      &::before {
+        left: -30px;
+      }
+      &::after {
+        right: -30px;
+      }
+    }
+    .text {
+      z-index: 2;
+      svg{
+        color: $primary-color;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: $bg-dark;
+        padding-left: 5px;
+        padding-right: 5px;
+        z-index: 1;
+      }
+      position: relative;
+      color: $text-secondary;
+      font-weight: 700;
+      border-top: 1px solid $text-secondary;
+    }
+  }
+  .team-member {
+    .btn {
+      position: relative;
+      z-index: 3;
+      background-color: $bg-dark;
+      color: $text-light;
+      outline: none;
+      box-shadow: none;
+      transition: all .3s;
+      &:hover {
+        background-color: $primary-color;
+      }
+    }
+  }
 }
 
