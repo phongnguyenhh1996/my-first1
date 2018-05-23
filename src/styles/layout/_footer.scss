@@ -1,0 +1,63 @@
+.footer {
+	background-color: $bg-dark;
+	.list-unstyled {
+		li {
+			display: inline-block;
+		}
+	}
+	.social-icon {
+		position: relative;
+		color: $text-light;	
+		padding: 7px;
+		margin: 0 5px;
+		&:hover::after {
+			background-color: $primary-color;
+			border-color: $primary-color;
+		}
+		&::after {
+			z-index: 0;
+			@include transition(all .3s);
+			@include transform(translate(-50%, -50%));
+			position: absolute;
+			content: "";
+			left: 50%;
+			top: 50%;
+			width: 40px;
+			height: 40px;
+			background-color: transparent;
+			border: 1px solid $text-secondary;
+			border-radius: 5px;
+		}
+		svg {
+			position: relative;
+			z-index: 3;
+		}
+	}
+}
+.contact {
+		position: relative;
+		background: url('../images/map.jpg');
+    	background-size: cover;
+    	background-position: top;
+}
+.message {
+	background-color: #f9f9f9;
+	border: 1px solid $text-light;
+	.form-control {
+		@include placeholder-color($text-light);
+		box-shadow: none;
+		outline: none;
+		&:focus {
+			@include placeholder-color($text-secondary);
+			border-color: $text-secondary;
+		}
+	}
+	.btn {
+		background-color: $primary-color;
+		color: $text-light;
+		font-weight: 700;
+	}
+}
+.copyright {
+	background-color: $bg-dark;
+}
