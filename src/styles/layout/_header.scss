@@ -1,4 +1,6 @@
-body{font-family: 'Fira Sans', sans-serif;}
+body {
+  font-family: 'Fira Sans', sans-serif;
+}
 .header-container {
   .bg-top {
     background: url('../images/back-top.jpg');
@@ -7,10 +9,13 @@ body{font-family: 'Fira Sans', sans-serif;}
   }
   .main-text {
     text-align: center;
-    color: #333333;
+    color: $text-dark;
     .h1 {
+      @include min-breakpoint(576) {
+        font-size: 4.2rem;
+      }
       font-weight: 700;
-      font-size: 4.2vw;
+      font-size: 3rem;
     }
     .dark {
       background-color: #333333;
@@ -48,7 +53,6 @@ body{font-family: 'Fira Sans', sans-serif;}
       .nav-link {
         color: #5f5f5f;
         font-weight: 700;
-        font-size: .9rem;
         text-transform: uppercase;
         &:hover, &:focus {
           color: #000;

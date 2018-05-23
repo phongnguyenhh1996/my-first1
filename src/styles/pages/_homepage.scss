@@ -129,7 +129,7 @@
     .small {
       color: $text-secondary;
     }
-    .col-4:hover {
+    .item:hover {
       .shape {
         background-color: $primary-color;
         box-shadow: 0 24px 0px 0px $bg-dark;
@@ -322,10 +322,15 @@
     }
   }
   .purchase-now {
+    font-size: .8rem;
     background-color: $primary-color;
     color: $text-light;
-    .btn:first-child {
+
+    .btn {
+      font-size: .8rem;
+      &:first-child {
       font-weight: 700;
+      }
     }
   }
   .team-member {

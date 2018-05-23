@@ -6,6 +6,15 @@ $(document).ready(function(){
 	  arrows: false,
 	  autoplay: true,
   	autoplaySpeed: 2000,
+  	responsive: [
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+      }
+    }
+  	]
 	});
 	$('.team-member .left').click(function(){
 		$('.multiple-items').slick('slickPrev');
