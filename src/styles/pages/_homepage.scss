@@ -5,6 +5,8 @@
         font-weight: 600;
         display: inline-block;
         position: relative;
+      }
+      .text{
         span {
           color: $primary-color;
         }
@@ -207,6 +209,7 @@
       max-width: 80%;
       max-height: 250px;
       .circle {
+      transition: all 1s;
       stroke: $primary-color;
       fill: none;
       stroke-width: 1;
@@ -239,6 +242,7 @@
       &:hover {
         background-color: rgba(1, 168, 158, .8);
         .icon {
+          visibility: visible;
           opacity: 1;
           transform: translateX(0);
           margin-right: 0;
@@ -322,10 +326,12 @@
     }
   }
   .purchase-now {
-    font-size: .8rem;
+    @include breakpoint(858) {
+      font-size: .8rem;
+    }
+    font-size: 1rem;
     background-color: $primary-color;
     color: $text-light;
-
     .btn {
       font-size: .8rem;
       &:first-child {
@@ -474,6 +480,9 @@
   .unique {
     color: $bg-dark;
     .text {
+      @include breakpoint(500) {
+        font-size: 16px;
+      }
       font-weight: 700;
       font-size: 25px;
     }
@@ -489,6 +498,7 @@
   }
 }
 .icon {
+  visibility: hidden;
   transition: all .4s;
   position: relative;
   padding: 5px;
@@ -532,6 +542,7 @@
       background-color: $bg-dark;
     }
     .icon {
+      visibility: visible;
       opacity: 1;
       transform: translateX(0);
       margin-right: 0;
@@ -609,3 +620,11 @@
       transform: translateY(-50%) translateX(-50%) rotate(-45deg);
     }
   }
+.roll {
+  animation-name: progress;
+}
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
