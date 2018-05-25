@@ -33,7 +33,7 @@
 <body>
   <div class="wrapper">
     <!-- include header.html -->
-    <header class="header-container">
+    <header class="header-container" id="top">
   <div class="header-content">
     <div class="container-fluid">
       <div class="row py-3 py-md-5 px-5 bg-top">
@@ -56,7 +56,7 @@
           <a href="#" class="down-arrow"><i class="fas fa-chevron-down fa-lg"></i></a>
         </div>
       </div>
-      <div class="row px-3 px-md-5 b-nav">
+      <div class="row px-3 px-md-5 b-nav ">
         <div class="col-12">
         <nav class="navbar navbar-expand-lg">
           <a class="navbar-brand" href="#"><img class="logo" src="../images/logo.png" width="60px" height="60px" /> <span class="brand-name">STARTUPRR</span></a>
@@ -67,25 +67,25 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto" id="top-menu">
               <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Portfolio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Pages</a>
+                <a class="nav-link" href="#top">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#feature">Features</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Mega Menu</a>
+                <a class="nav-link" href="#works">Works</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="#facts">Facts</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#members">Members</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#prices">Prices</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
               </li>
             </ul>
             <form class="form-inline my-2 my-0">
@@ -415,7 +415,7 @@
               <p class="skill-name mt-3 text-center">ADVERTISEMENT</p>
             </div>
           </div>
-          <div class="row px-3 px-md-5">
+          <div class="row px-3 px-md-5" id="works">
             <div class="col-12 py-5">
               <div class="start-doing text-center">
               <p class="h3">
@@ -654,7 +654,7 @@
             </div>
             <button class="btn w-50 mx-auto mt-5 mb-4">VIEW ALL WORKS</button>
           </div>
-          <div class="row px-3 px-md-5 pb-5 company-facts">
+          <div class="row px-3 px-md-5 pb-5 company-facts" id="facts">
             <div class="col-12 py-5">
               <div class="key"><i class="fas fa-briefcase text-white" ></i></div>
               <div class="start-doing text-center">
@@ -718,7 +718,7 @@
               </p>
             </div>
           </div>
-          <div class="row px-3 px-md-5 py-5 team-member">
+          <div class="row px-3 px-md-5 py-5 team-member" id="members">
             <div class="col-12 py-5">
               <div class="start-doing text-center">
                 <button class="float-left btn left"><i class="fas fa-caret-left"></i></button>
@@ -1035,7 +1035,7 @@
               </div>
             </div>
           </div>
-          <div class="row px-3 px-md-5 price">
+          <div class="row px-3 px-md-5 price" id="prices">
             <div class="col-12 py-5">
               <div class="start-doing text-center">
                 <p class="h3">
@@ -1174,7 +1174,7 @@
           </ul>
         </div>
     </div>
-    <div class="row px-3 px-md-5 py-5 contact">
+    <div class="row px-3 px-md-5 py-5 contact" id="contact">
       <div class="col-8 col-sm-5 col-lg-4 message p-3 bg-light">
         <form>
           <input type="text" class="form-control mb-3" placeholder="Name">

@@ -51,6 +51,7 @@ body {
   }
   .b-nav{
       border-bottom: 1px solid #dedede;
+      transition: background 1s;
       &, .navbar-brand {
         opacity: 0;
       }
@@ -63,7 +64,7 @@ body {
           color: #000;
         }
       }
-      .active > .nav-link {
+      .active.nav-link {
           color: #e4e4e4;
           border-radius: 5px;
           background-color: $primary-color;
@@ -78,4 +79,16 @@ body {
       color: #9c9c9c;
       font-weight: 700;
 
+}
+.sticky {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  background-color: $text-light;
+  padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }

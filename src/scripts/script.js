@@ -110,7 +110,7 @@ $(document).ready(function(){
 		}
 	};
 	addAnimation(".tablet", "fadeInLeft", "1s");
-	addAnimation(".tablet-landscape", "fadeInLeft", "1.3s");
+	addAnimation(".tablet-landscape", "fadeInLeft", "1.1s");
 	var featureList= $('.features-list li');
 	addAnimation($(featureList), "fadeInRight", "0.8s");
 	for (var i = 0; i < featureList.length; i++) {
@@ -144,49 +144,50 @@ $(document).ready(function(){
 	}
 	new WOW().init();
 	///
-	// Cache selectors
-var lastId,
-    topMenu = $("#top-menu"),
-    topMenuHeight = topMenu.outerHeight()+15,
-    // All list items
-    menuItems = topMenu.find("a"),
-    // Anchors corresponding to menu items
-    scrollItems = menuItems.map(function(){
-      var item = $($(this).attr("href"));
-      if (item.length) { return item; }
-    });
+	$('body').scrollspy({target: ".navbar", offset: 50});   
+	$("#top-menu a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
 
-// Bind click handler to menu items
-// so we can get a fancy scroll animation
-menuItems.click(function(e){
-  var href = $(this).attr("href"),
-      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
-  $('html, body').stop().animate({ 
-      scrollTop: offsetTop
-  }, 300);
-  e.preventDefault();
-});
+      // Store hash
+      var hash = this.hash;
 
-// Bind to scroll
-$(window).scroll(function(){
-   // Get container scroll position
-   var fromTop = $(this).scrollTop()+topMenuHeight;
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
    
-   // Get id of current scroll item
-   var cur = scrollItems.map(function(){
-     if ($(this).offset().top < fromTop)
-       return this;
-   });
-   // Get the id of the current element
-   cur = cur[cur.length-1];
-   var id = cur && cur.length ? cur[0].id : "";
-   
-   if (lastId !== id) {
-       lastId = id;
-       // Set/remove active class
-       menuItems
-         .parent().removeClass("active")
-         .end().filter("[href='#"+id+"']").parent().addClass("active");
-   }                   
-});
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    }  // End if
+  });
+	// grab the initial top offset of the navigation 
+ 	var stickyNavTop = $('.b-nav').offset().top;
+ 	
+ 	// our function that decides weather the navigation bar should have "fixed" css position or not.
+ 	var stickyNav = function(){
+    var scrollTop = $(window).scrollTop(); // our current vertical position from the top
+         
+    // if we've scrolled more than the navigation, change its position to fixed to stick to top,
+    // otherwise change it back to relative
+    if (scrollTop > stickyNavTop) { 
+        $('.b-nav').addClass('sticky');
+        $('.b-nav .col-12').addClass('animated slideInDown');
+        $('.bg-top').css("margin-bottom",($(".b-nav").outerHeight()));
+    } else {
+        $('.b-nav').removeClass('sticky'); 
+        $('.b-nav .col-12').removeClass('animated slideInDown');
+        $('.bg-top').css("margin-bottom","0");
+    }
+	};
+
+	stickyNav();
+	// and run it again every time you scroll
+	$(window).scroll(function() {
+		stickyNav();
+	});
 });
