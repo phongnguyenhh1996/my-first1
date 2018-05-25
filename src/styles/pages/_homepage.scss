@@ -20,6 +20,9 @@
       border-radius: 50%;
       transition: background .3s;
     }
+    .fa-puzzle-piece path{
+      transform: translate(50px, -14px);
+    }
     .offer-item:hover .big-icon {
         background-color: $primary-color;
     }
@@ -56,8 +59,9 @@
     .tablet {
       border: 3px solid $text-light;
       position: absolute;
+      top: 0;
       right: 0;
-      height: 700px;
+      bottom: -50px;
       width: 300px;
       background-color: #fff;
       border-radius: 20px;
@@ -82,9 +86,10 @@
       border-bottom: none;
       position: absolute;
       left: 0;
-      bottom: 0;  
-      height: 300px;
-      width: 600px;
+      bottom:-30px;
+      right: 50px;
+      height: 320px;
+      width: 44vw;
       background-color: #fff;
       border-top-right-radius: 20px;
       border-top-left-radius: 20px;
@@ -146,11 +151,14 @@
     .shape {
       transition: all .3s;
       position: relative;
+      width: 46px;
+      height: 46px;
       background-color: $bg-dark;
       padding: 5px;
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
       box-shadow: 0 24px 0px 0px $primary-color;
+      text-align: center;
       &::after {
         transition: all .3s;
         position: absolute;
@@ -159,8 +167,8 @@
         left: 0;
         width: 0;
         height: 0;
-        border-left: 24px solid transparent;
-        border-right: 24px solid transparent;    
+        border-left: 23px solid transparent;
+        border-right: 23px solid transparent;    
         border-top: 18px solid $bg-dark;
       }
       &::before {
@@ -171,13 +179,13 @@
         left: 0;
         width: 0;
         height: 0;
-        border-left: 24px solid transparent;
-        border-right: 24px solid transparent;    
+        border-left: 23px solid transparent;
+        border-right: 23px solid transparent;    
         border-top: 18px solid $primary-color;
       }
       svg {
         color: $text-light;
-        margin: 7px;
+        margin: 5px auto 0;
         margin-bottom: 0;
         display: block;
       }

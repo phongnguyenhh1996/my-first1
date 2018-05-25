@@ -8,14 +8,14 @@ $(document).ready(function(){
   	autoplaySpeed: 2000,
   	responsive: [
     {
-      breakpoint: 991,
+      breakpoint: 1124,
       settings: {
         slidesToShow: 3,
         slidesToScroll: 3,
       }
     },
     {
-      breakpoint: 767,
+      breakpoint: 875,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 2,
@@ -189,5 +189,16 @@ $(document).ready(function(){
 	// and run it again every time you scroll
 	$(window).scroll(function() {
 		stickyNav();
+	});
+	$('#navbarSupportedContent').on('hidden.bs.collapse', function () {
+		$(".navbar-toggler").children().removeClass("fa-times");
+		$(".navbar-toggler").children().addClass("fa-bars");
+});
+	$('#navbarSupportedContent').on('shown.bs.collapse', function () {
+		$(".navbar-toggler").children().removeClass("fa-bars");
+		$(".navbar-toggler").children().addClass("fa-times");
+});
+	$(".b-nav .nav-link").click(function(){
+		$("#navbarSupportedContent").collapse('hide');
 	});
 });
