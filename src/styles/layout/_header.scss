@@ -8,7 +8,7 @@ body {
     background-position: center center;
   }
   .main-text {
-    @include opacity(0);
+    opacity: 0;
     text-align: center;
     color: $text-dark;
     .h1 {
